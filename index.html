@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test site</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        #viewer {
+            width: 80%;
+            height: 80vh;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test site</h1>
+    <div id="viewer"></div>
+
+    <script>
+        OpenSeadragon({
+            id: "viewer",
+            prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/images/",
+            tileSources: "https://itsmksn.github.io/zharfiles/dzi/output.dzi",
+            debugMode: false // Включаємо режим відладки
+        });
+    </script>
+</body>
+</html>
